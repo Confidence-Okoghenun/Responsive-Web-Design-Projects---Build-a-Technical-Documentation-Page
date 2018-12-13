@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheets/css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <div class="nav_contents">
+                <header>LocalStorage Docs</header>
+                <p>Jump to:</p>
+                <ul>
+                    <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                    <li><a href="#Syntax" class="nav-link">Syntax</a></li>
+                    <li><a href="#Example" class="nav-link">Example</a></li>
+                    <li><a href="#Specifications" class="nav-link">Specifications</a></li>
+                    <li><a href="#Browser_compatibility" class="nav-link">Browser compatibility</a></li>
+                    <li><a href="#See_also" class="nav-link">See also</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <p>The read-only <span class="sp_text">localStorage</span> property allows you to access a <span class="sp_text"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage" title="The Storage interface of the Web Storage API provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.">Storage</a></span> object for the <span class="sp_text"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.">Document</a></span>'s origin; the stored data is saved across browser sessions. <span class="sp_text">localStorage</span> is similar to sessionStorage, except that while data stored in <span class="sp_text">localStorage</span> has no expiration time, data stored in sessionStorage gets cleared when the page session ends — that is, when the page is closed.</p>
+                <p>It should be noted that data stored in either <span class="sp_text">localStorage</span> or <span class="sp_text">sessionStorage</span> <strong>is specific to the protocol of the page</strong>.</p>
+            </section>
+            <section class="main-section" id="Syntax">
+                <header>Syntax</header><br>
+                <code>myStorage = window.localStorage;</code>
+                <div class="sub_header">Value</div>
+                <p>A <span class="sp_text"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage" title="The Storage interface of the Web Storage API provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.">Storage</a></span> object which can be used to access the current origin's local storage space.</p>
+                <div class="sub_header">Exceptions</div>
+                <p><span class="sp_text">SecurityError</span>
+                The request violates a policy decision, or the origin is not <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin">a valid scheme/host/port tuple</a> (this can happen if the origin uses the <span class="sp_text">file:</span> or <span class="sp_text">data:</span> scheme, for example). For example, the user may have their browser configured to deny permission to persist data for the specified origin.</p>
+            </section>
+            <section class="main-section" id="Example">
+                <header>Example</header>
+                <p>The following snippet accesses the current domain's local <span class="sp_text"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage" title="The Storage interface of the Web Storage API provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.">Storage</a></span> object and adds a data item to it using <span class="sp_text"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem" title="The setItem() method of the Storage interface, when passed a key name and value, will add that key to the storage, or update that key's value if it already exists.">Storage.setItem()</a></span>.</p>
+                <code>localStorage.setItem('myCat', 'Tom');</code>
+                <p>The syntax for reading the localStorage item is as follows:</p>
+                <code>var cat = localStorage.getItem('myCat');</code>
+                <p>The syntax for removing the localStorage item is as follows:</p>
+                <code>localStorage.removeItem('myCat');</code>
+                <p>The syntax for removing all the localStorage items is as follows:</p>
+                <code>localStorage.clear(); // clear all items</code>
+                <p><strong>Note</strong>: Please refer to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> article for a full example.</p>
+            </section>
+            <section class="main-section" id="Specifications">
+                <header>Specifications</header>
+                <p>The specification for follows the <strong>Living Standard</strong> specs, which can be found <a href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-localstorage">here</a></p>
+            </section>
+            <section class="main-section" id="Browser_compatibility">
+                <header>Browser compatibility</header>
+                <p>The localStorage api is available in the following browsers</p>
+                <div class="flex_ul">
+                    <ul>
+                        <li>Chrome</li>
+                        <li>Edge</li>
+                        <li>Firefox</li>
+                        <li>Internet Explore</li>
+                    </ul>
+                    <ul>
+                        <li>Opera</li>
+                        <li>Safar</li>
+                        <li>Android webview</li>
+                        <li>Safari on iOS</li>    
+                    </ul>
+                </div>
+            </section>
+            <section class="main-section" id="See_also">
+                <header>See also</header>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API" title="">Using the Web Storage API</a></li>
+                    <li><span class="sp_text"><a href="https://developer.mozilla.org/en-US/docs/Web/API/LocalStorage" title="The documentation about this has not yet been written; please consider contributing!">LocalStorage</a></span></li>
+                    <li><span class="sp_text"><a href="https://developer.mozilla.org/en-US/docs/Web/API/SessionStorage" title="The sessionStorage property allows you to access a session Storage object. sessionStorage is similar to localStorage, the only difference is while data stored in localStorage has no expiration set, data stored in sessionStorage gets cleared when the page session ends. A page session lasts for as long as the browser is open and survives over page reloads and restores. Opening a page in a new tab or window will cause a new session to be initiated.">SessionStorage</a></span></li>
+                    <li><span class="sp_text"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage" title="The sessionStorage property allows you to access a session Storage object for the current origin. sessionStorage is similar to Window.localStorage; the only difference is while data stored in localStorage has no expiration set, data stored in sessionStorage gets cleared when the page session ends. A page session lasts for as long as the browser is open and survives over page reloads and restores. Opening a page in a new tab or window will cause a new session to be initiated with the value of the top-level browsing context, which differs from how session cookies work.">Window.sessionStorage</a></span></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

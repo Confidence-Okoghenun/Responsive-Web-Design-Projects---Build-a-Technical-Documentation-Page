@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+}
+body div.container {
+  display: flex;
+  font-size: 16px;
+}
+body div.container a {
+  color: #3d7e9a;
+  text-decoration: none;
+}
+body div.container a:hover {
+  text-decoration: underline;
+}
+body div.container nav {
+  width: 25%;
+}
+body div.container nav div.nav_contents {
+  width: 22%;
+  position: fixed;
+  font-size: 0.8em;
+  font-family: monospace;
+}
+body div.container nav div.nav_contents header {
+  padding: 15px;
+  color: white;
+  background: black;
+}
+body div.container nav div.nav_contents p {
+  padding-left: 15px;
+}
+body div.container nav div.nav_contents ul {
+  padding-left: 15px;
+  list-style-type: none;
+}
+body div.container nav div.nav_contents ul li {
+  padding: 4px 0;
+}
+body div.container main {
+  width: 75%;
+  padding-top: 50px;
+  padding-right: 20px;
+}
+body div.container main section {
+  margin-bottom: 50px;
+}
+body div.container main section header {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+body div.container main section div.sub_header {
+  margin: 1em 0;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+}
+body div.container main section p {
+  line-height: 1.5;
+}
+body div.container main section code {
+  padding: 20px;
+  display: block;
+  background: #e4f0f5;
+  overflow-x: scroll;
+  border-left: 5px solid #3d7e9a;
+}
+body div.container main section span.sp_text {
+  font-size: 0.9em;
+  padding: 3px 5px;
+  border-radius: 3px;
+  background: #e4f0f5;
+  font-family: monospace;
+}
+body div.container main section ul {
+  list-style-type: square;
+}
+body div.container main section ul li {
+  padding: 5px 0;
+}
+body div.container main section div.flex_ul {
+  display: flex;
+}
+body div.container main section div.flex_ul ul {
+  width: 50%;
+}
+body div.container main section strong {
+  color: rgba(0, 0, 0, 0.8);
+}
+@media (min-width: 1050px) {
+  body div.container nav {
+    width: 18%;
+  }
+  body div.container nav div.nav_contents {
+    width: 15%;
+  }
+  body div.container main {
+    width: 82%;
+  }
+}
+@media (max-width: 780px) {
+  body div.container {
+    display: block;
+    margin: 0 20px;
+  }
+  body div.container nav {
+    width: 100%;
+  }
+  body div.container nav div.nav_contents {
+    width: unset;
+    position: unset;
+  }
+  body div.container nav div.nav_contents header {
+    margin: 0 -20px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  body div.container nav div.nav_contents p {
+    padding-left: 0;
+  }
+  body div.container main {
+    width: 100%;
+    padding-top: 0;
+    padding-right: 0;
+  }
+  body div.container main section p {
+    line-height: 1.8;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
